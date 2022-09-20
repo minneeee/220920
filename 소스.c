@@ -87,13 +87,49 @@ int main(void)
 	f = f + 5.0;
 	printf("f=%lf\n", f);
 	printf("f=%p\n", f);
+
 	return 0;
 }*/
 
-#include <stdio.h>
-int main(void)
+/*#include <stdio.h>
+int main(const char c)
 {
 	const int A = 3;
+	// A = 4;
 	printf("%d\n", A);
+	int a = 3;
+	a = 4;
+	a = 5;
+	int c = a + 2;
+	return 0;
+}*/
+
+
+// p.121 3번 문제
+// 입력 : 반지름
+// 출력 : 구의 표면적과 부피를 출력
+// 수식 : 구의 표면적 (4.0 * PI * r * r),
+//		부피 (4.0/3.0 * PI * r * r * r)
+// 단, PI는 기호상수로 정의해서 사용(3.141592)
+
+#define PI 3.141592
+#include <stdio.h>
+
+int main(void)
+{
+	double bj, mj, bp;
+	bj = 0;
+	mj = 0;
+	bp = 0;
+	
+	printf("반지름을 입력하시오 : ");
+	scanf_s("%lf", &bj);
+
+	mj = 4 * PI * (bj * bj);
+	bp = 4.0/3.0 * PI * (bj * bj * bj);
+
+	printf("구의 표면적 : %lf\n", mj);
+	printf("구의 부피: %lf\n", bp);
+
 	return 0;
 }
