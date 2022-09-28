@@ -42,5 +42,6 @@ int main(void)
 	printf("%c\n", '\a');	// '문자', "문자열"
 	ret = scanf("%d %d", &age, &height);	// 나이 입력
 	printf("age : %d\nheight : %d\n", age, height);	// 나이 출력
+	printf("다음부터는 무조건 로그아웃할것!!!!!!");
 	return 0;
 }
